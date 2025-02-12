@@ -1,0 +1,83 @@
+@font-face {
+    font-family: vcr;
+    src: url(VCR_OSD_MONO_1.001.ttf);
+    outline-color: white;
+    outline-style: groove;
+}
+@keyframes scroll{
+    from{
+        background-position: 0, 0;
+    }
+    to{
+        background-position: 142%;
+    }
+}
+html{
+    background-image: url(assets/damier.png);
+    background-position-x: left;
+    cursor: url(assets/cursor-default.png), auto;
+    animation: scroll 6s linear infinite;
+}
+.cube{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 553px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(109, 109, 109);
+    opacity: 0.7;
+    z-index: -1;
+}
+input[type=button]{
+    cursor: url(assets/cursor-pointer.png), auto;  
+    border: none;
+    background-color: rgb(198, 124, 225);
+    padding: 12px;
+    color: rgb(235, 219, 255);
+    font-family: vcr;
+    display: flex;
+    float: left;
+    border: 3px solid rgb(128, 0, 75);
+
+    justify-content: space-evenly;
+    border-radius: 8px;
+    transition-duration: 355ms;
+}
+
+input[type=text]{
+    background-color: rgb(241, 255, 255);  
+    border: 3px solid rgb(255, 195, 239);
+    font-family: vcr;
+    width: 5%;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus{
+    width: 10%;
+    background-color: rgb(187, 205, 255);  
+    color: rgb(0, 0, 0);
+    border-radius: 20%;
+    cursor: url(assets/cursor-default.png), all-scroll; 
+}
+input[type=text]:hover{
+    cursor: url(assets/cursor-default.png), all-scroll; 
+
+}
+
+input[type=button]:hover{
+    cursor: url(assets/cursor-pointer.png), auto;  
+    background-color: rgb(253, 163, 247);  
+}
+h1, p, .all{
+    display: flex;
+    font-family: vcr;
+    justify-content: center;
+    text-align: center;
+}
+.bbbb{
+    display: flex;
+    justify-content: center;
+}
