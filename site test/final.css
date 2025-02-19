@@ -1,0 +1,97 @@
+@font-face {
+    font-family: vcr;
+    src: url(VCR_OSD_MONO_1.001.ttf);
+    outline-color: white;
+    outline-style: groove;
+}
+@keyframes scroll{
+    from{
+        background-position: 0, 0;
+    }
+    to{
+        background-position: 142%;
+    }
+}
+
+html{
+    cursor: url(assets/cursor-default.png), auto;
+    background-image: url(assets/damier.png);
+    background-position-x: left;
+    animation: scroll 15s linear infinite;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.bbbb, .all,.title,.page {
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-family: vcr;
+    text-align: center;
+    font-size: 70%;
+    background-blend-mode:soft-light;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+}
+
+@media screen and (width <= 600px){
+    .all,.title,.page{
+        display: flex;
+        font-size: 50%;
+    }
+}
+
+input[type=button]{
+    cursor: url(assets/cursor-pointer.png), auto;  
+    border: none;
+    background-color: rgb(198, 124, 225);
+    padding: 3%;
+    color: rgb(235, 219, 255);
+    font-family: vcr;
+    display: flex;
+    float: left;
+    justify-content:end;
+    border: 3px solid rgb(128, 0, 75);
+
+    justify-content: space-evenly;
+    border-radius: 8px;
+    transition-duration: 355ms;
+}
+
+input[type=text]{
+    width: 30%;
+    background-color: rgb(241, 255, 255);  
+    border: 3px solid rgb(255, 195, 239);
+    font-family: vcr;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus{
+    width: 40%;
+    background-color: rgb(187, 205, 255);  
+    color: rgb(0, 0, 0);
+    border-radius: 20%;
+    cursor: url(assets/cursor-default.png), all-scroll; 
+}
+input[type=text]:hover{
+    cursor: url(assets/cursor-pointer.png), all-scroll; 
+}
+
+input[type=button]:hover{
+    cursor: url(assets/cursor-pointer.png), auto;  
+    background-color: rgb(253, 163, 247);  
+}
+.section{
+    background-color: rgba(119, 115, 173, 0.886);
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+}
